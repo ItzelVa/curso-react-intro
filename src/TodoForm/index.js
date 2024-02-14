@@ -40,7 +40,7 @@ export function TodoForm() {
                 <button 
                     type="submit"
                     className="TodoForm-button TodoForm-button--add">
-                    Anadir
+                    Añadir
                 </button>
             </div>
         </form>
