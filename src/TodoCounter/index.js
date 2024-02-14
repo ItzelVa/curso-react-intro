@@ -17,7 +17,7 @@ export function TodoCounter() {
         <h1 className='TodoCounter'>
           {!completedAll && <>Has completado <span>{completed}</span> de 
           <span> {total}</span> TODOs</>}
-          {completedAll && <span>Felicidades has completodo todo!</span>}
+          {completedAll && <span>Felicidades has completado tus TODOs!</span>}
         </h1>
       );
 }
