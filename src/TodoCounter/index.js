@@ -1,14 +1,8 @@
 import './TodoCounter.css'
 import '../TodosLoading/TodosLoading.css'
 import React from 'react';
-import { TodoContext } from '../TodoContext';
 
-export function TodoCounter() {
-
-  const {
-    completedTodos: completed,
-    totalTodos: total,
-  } = React.useContext(TodoContext)
+export function TodoCounter({completed,total}) {
 
   const completedAll = (completed === total) && (completed !== 0) ? 
   true : false
