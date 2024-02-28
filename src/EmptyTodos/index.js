@@ -1,9 +1,9 @@
-
+import './EmptyTodos.css'
 import React from 'react';
 
 export function EmptyTodos () {
 
   return (
-      <p>Crea tu primer TODO!</p>
+      <p className='EmptyTodos'>Crea tu primer TODO!</p>
     );
 }
