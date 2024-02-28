@@ -8,11 +8,8 @@ export function TodoList (props) {
         {props.error && props.onError()}
         {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
         {(!props.loading && !props.searchedTodos.length && !!props.totalTodos) && props.onEmptyResults(props.searchValue)}
-        {props.searchedTodos.map(props.render)}
+        {props.searchedTodos.map(props.children)}
 
-        <ul>
-          {props.children}
-        </ul>
       </section>
       
     );

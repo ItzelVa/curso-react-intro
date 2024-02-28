@@ -14,6 +14,7 @@ import { CounterLoading } from '../CounterLoading';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
 import React from 'react'
+import { EmptyResults } from '../EmptyResults';
 
 function App() {
 
@@ -49,8 +50,20 @@ function App() {
                 onLoading={() => <><TodosLoading/> <TodosLoading/> <TodosLoading/></>}
                 onError={() => <TodosError/>}
                 onEmptyTodos={() => <EmptyTodos/>}
-                onEmptyResults={(searchValue) => <p>No se encontraron resultados para {searchValue}</p>}
-                render={todo => (
+                onEmptyResults={(searchValue) => <EmptyResults searchValue={searchValue}/>}
+                // render={todo => (
+                //   <TodoItem 
+                //             key={todo.text} 
+                //             text={todo.text}
+                //             completed={todo.completed}
+                //             onComplete={()=> {
+                //               return completeTodo(todo.text);
+                //             }}
+                //             onDelete={()=> deleteTodo(todo.text)}/>
+                //         )}
+        >
+
+          {todo => (
                   <TodoItem 
                             key={todo.text} 
                             text={todo.text}
@@ -60,7 +73,8 @@ function App() {
                             }}
                             onDelete={()=> deleteTodo(todo.text)}/>
                         )}
-                    />
+
+      </TodoList>
     
       {/* <TodoList>
     
